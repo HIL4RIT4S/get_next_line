@@ -6,7 +6,7 @@
 /*   By: imeliani <imeliani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 12:53:26 by imeliani          #+#    #+#             */
-/*   Updated: 2022/12/22 17:54:58 by imeliani         ###   ########.fr       */
+/*   Updated: 2023/03/26 13:53:54 by imeliani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ char	*get_next_line(int fd)
 // 	fd1 = open("get_next_line.c", O_RDONLY);
 // 	str = get_next_line(fd);
 // 	str1 = get_next_line(fd1);
-// 	while (str != NULL || str1 != NULL)
+// 	while (str != NULL|| str1 != NULL)
 // 	{
 // 		printf("%s", str);
 // 		free(str);

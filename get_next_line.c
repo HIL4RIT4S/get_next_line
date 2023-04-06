@@ -6,7 +6,7 @@
 /*   By: imeliani <imeliani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 12:53:26 by imeliani          #+#    #+#             */
-/*   Updated: 2023/03/30 15:55:37 by imeliani         ###   ########.fr       */
+/*   Updated: 2023/04/06 18:05:40 by imeliani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*del(char *s1)
 		;
 	if (s1[j] == '\n')
 		j++;
-	s2 = calloc(sizeof(char), ft_strlen(s1) - j + 1);
+	s2 = ft_calloc(sizeof(char), ft_strlen(s1) - j + 1);
 	if (!s2)
 		return (NULL);
 	while (s1[j])
@@ -60,7 +60,7 @@ char	*resline(char *str)
 		;
 	if (str[i] == '\n')
 		i++;
-	line = calloc(sizeof(char), (i + 1));
+	line = ft_calloc(sizeof(char), (i + 1));
 	i = -1;
 	while (str[++i] != '\n' && str[i])
 		line[i] = str[i];
@@ -79,7 +79,7 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	buffer = calloc(sizeof(char), BUFFER_SIZE + 1);
+	buffer = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
 	if (!buffer)
 		return (NULL);
 	i = 1;
@@ -100,21 +100,21 @@ char	*get_next_line(int fd)
 // int main ()
 // {
 // 	int fd;
-// 	int fd1;
+// 	// int fd1;
 // 	char *str;
-// 	char *str1;
+// 	// char *str1;
 
-// 	fd = open("get_next_line.c", O_RDONLY);
-// 	fd1 = open("get_next_line.c", O_RDONLY);
+// 	fd = open("b.txt", O_RDONLY);
+// 	// fd1 = open("get_next_line.c", O_RDONLY);
 // 	str = get_next_line(fd);
-// 	str1 = get_next_line(fd1);
-// 	while (str != NULL|| str1 != NULL)
+// 	// str1 = get_next_line(fd1);
+// 	while (str != NULL)//|| str1 != NULL)
 // 	{
 // 		printf("%s", str);
 // 		free(str);
 // 		str = get_next_line(fd);
-// 		printf("%s", str1);
-// 		free(str1);
-// 		str1 = get_next_line(fd1);
+// 		// printf("%s", str1);
+// 		// free(str1);
+// 		// str1 = get_next_line(fd1);
 // 	}
 // }
